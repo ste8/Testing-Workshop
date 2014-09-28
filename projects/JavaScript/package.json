@@ -1,0 +1,10 @@
+{
+  "name": "TestingWorkshop",
+  "version": "0.0.1",
+  "description": "Workshop unit testing",
+  "author": "Emanuele Rampichini <emanuele.rampichini@gmail.com>",
+  "devDependencies": {
+    "jasmine-node": "1.14.5"
+  },
+  "engine": "node >= 0.8"
+}
