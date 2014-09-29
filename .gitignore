@@ -183,5 +183,4 @@ UpgradeLog*.htm
 FakesAssemblies/
 
 #Include dlls from lib folder
-!projects/DotNet/lib/NUnit/nunit.framework.dll
 !projects/DotNet/lib/*/*.dll

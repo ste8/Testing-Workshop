@@ -1,5 +1,5 @@
-﻿using NUnit.Framework;
-using Rhino.Mocks;
+﻿using NSubstitute;
+using NUnit.Framework;
 
 namespace HelloWorld.Tests
 {
@@ -19,12 +19,12 @@ namespace HelloWorld.Tests
         }
 
         [Test]
-        public void StubTest()
+        public void StubTestWithNSubstitute()
         {
             //Arrange
-            var service = MockRepository.GenerateStub<IWeatherService>();
-            service.Expect(x => x.GetWeather("Rome")).Return("Sunny");
-            service.Expect(x => x.GetWeather("Cortina")).Return("Snowy");
+            var service = Substitute.For<IWeatherService>();
+            service.GetWeather("Rome").Returns("Sunny");
+            service.GetWeather("Cortina").Returns("Snowy");
 
             //Act
             var actual = service.GetWeather("Rome");
@@ -34,12 +34,12 @@ namespace HelloWorld.Tests
         }
 
         [Test]
-        public void MockTest()
+        public void MockTestWithNSubstitute()
         {
             //Arrange
-            var service = MockRepository.GenerateMock<IWeatherService>();
-            service.Expect(x => x.GetWeather("Rome")).Return("Sunny");
-            service.Expect(x => x.GetWeather("Cortina")).Return("Snowy");
+            var service = Substitute.For<IWeatherService>();
+            service.GetWeather("Rome").Returns("Sunny");
+            service.GetWeather("Cortina").Returns("Snowy");
 
             //Act
             var actual = service.GetWeather("Rome");
@@ -47,10 +47,43 @@ namespace HelloWorld.Tests
             //Assert
             Assert.AreEqual("Sunny", actual);
 
-            service.AssertWasCalled(x => x.GetWeather("Rome"));
-            service.AssertWasNotCalled(x => x.GetWeather("Cortina"));
-            //service.VerifyAllExpectations();
+            service.Received().GetWeather("Rome");
+            service.DidNotReceive().GetWeather("Cortina");
         }
+
+        //[Test]
+        //public void StubTestWithRhinoMock()
+        //{
+        //    //Arrange
+        //    var service = MockRepository.GenerateStub<IWeatherService>();
+        //    service.Expect(x => x.GetWeather("Rome")).Return("Sunny");
+        //    service.Expect(x => x.GetWeather("Cortina")).Return("Snowy");
+
+        //    //Act
+        //    var actual = service.GetWeather("Rome");
+
+        //    //Assert
+        //    Assert.AreEqual("Sunny", actual);
+        //}
+
+        //[Test]
+        //public void MockTestWithRhinoMock()
+        //{
+        //    //Arrange
+        //    var service = MockRepository.GenerateMock<IWeatherService>();
+        //    service.Expect(x => x.GetWeather("Rome")).Return("Sunny");
+        //    service.Expect(x => x.GetWeather("Cortina")).Return("Snowy");
+
+        //    //Act
+        //    var actual = service.GetWeather("Rome");
+
+        //    //Assert
+        //    Assert.AreEqual("Sunny", actual);
+
+        //    service.AssertWasCalled(x => x.GetWeather("Rome"));
+        //    service.AssertWasNotCalled(x => x.GetWeather("Cortina"));
+        //    //service.VerifyAllExpectations();
+        //}
     }
 
     public interface IWeatherService
