@@ -12,10 +12,10 @@ public class HelloTests {
 		assertTrue(true);
 	}
 	
-	@Test
-	public void firstFailingTest() {
-		fail("This must fail!!");
-	}
+	//@Test
+	//public void firstFailingTest() {
+	//	fail("This must fail!!");
+	//}
 	
 	@Test
 	public void stubTestWithMockito()

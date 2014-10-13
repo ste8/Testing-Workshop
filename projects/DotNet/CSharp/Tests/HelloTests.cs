@@ -12,11 +12,11 @@ namespace HelloWorld.Tests
             Assert.True(true);
         }
 
-        [Test]
-        public void FirstFailingTest()
-        {
-            Assert.False(true, "I should fail!!");
-        }
+        //[Test]
+        //public void FirstFailingTest()
+        //{
+        //    Assert.False(true, "I should fail!!");
+        //}
 
         [Test]
         public void StubTestWithNSubstitute()

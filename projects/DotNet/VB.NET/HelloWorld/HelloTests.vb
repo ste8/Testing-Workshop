@@ -9,10 +9,10 @@ Public Class HelloTests
         Assert.True(True)
     End Sub
 
-    <Test>
-    Public Sub FirstFailingTest()
-        Assert.False(True, "I should fail!!")
-    End Sub
+    '<Test>
+    'Public Sub FirstFailingTest()
+    '    Assert.False(True, "I should fail!!")
+    'End Sub
 
     <Test>
     Public Sub StubTestWithNSubstitute()
