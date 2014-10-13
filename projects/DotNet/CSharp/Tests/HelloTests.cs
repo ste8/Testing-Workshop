@@ -50,44 +50,5 @@ namespace HelloWorld.Tests
             service.Received().GetWeather("Rome");
             service.DidNotReceive().GetWeather("Cortina");
         }
-
-        //[Test]
-        //public void StubTestWithRhinoMock()
-        //{
-        //    //Arrange
-        //    var service = MockRepository.GenerateStub<IWeatherService>();
-        //    service.Expect(x => x.GetWeather("Rome")).Return("Sunny");
-        //    service.Expect(x => x.GetWeather("Cortina")).Return("Snowy");
-
-        //    //Act
-        //    var actual = service.GetWeather("Rome");
-
-        //    //Assert
-        //    Assert.AreEqual("Sunny", actual);
-        //}
-
-        //[Test]
-        //public void MockTestWithRhinoMock()
-        //{
-        //    //Arrange
-        //    var service = MockRepository.GenerateMock<IWeatherService>();
-        //    service.Expect(x => x.GetWeather("Rome")).Return("Sunny");
-        //    service.Expect(x => x.GetWeather("Cortina")).Return("Snowy");
-
-        //    //Act
-        //    var actual = service.GetWeather("Rome");
-
-        //    //Assert
-        //    Assert.AreEqual("Sunny", actual);
-
-        //    service.AssertWasCalled(x => x.GetWeather("Rome"));
-        //    service.AssertWasNotCalled(x => x.GetWeather("Cortina"));
-        //    //service.VerifyAllExpectations();
-        //}
-    }
-
-    public interface IWeatherService
-    {
-        string GetWeather(string city);
     }
 }
