@@ -1,6 +1,17 @@
 Testing-Workshop
 ================
 
+.NET (C# e VB.NET)
+----------
+
+Per gli sviluppatori .NET che non hanno ancora usato una libreria di unit testing, consigliamo NUnit (http://www.nunit.org), in abbinamento a TestDriven.Net (http://testdriven.net), un software in grado di eseguire i test direttamente dall'interno di Visual Studio (è gratuito per uso personale, sufficiente per il nostro workshop).
+In alternativa, sia Visual Studio dalla versione 2012 che Resharper sono in grado di eseguire test scritti con NUnit.
+
+Java
+----------
+
+Per gli sviluppatori Java, Eclispe è già in grado di far girare test con JUnit. Nel caso usiate un IDE diverso, verificate che riuscite ad eseguire dei test con JUnit o librerie analoghe.
+
 JavaScript
 ----------
 
