@@ -1,20 +1,20 @@
 ﻿Imports NUnit.Framework
 Imports NSubstitute
 
-<TestFixture>
+<TestFixture()> _
 Public Class HelloTests
 
-    <Test>
+    <Test()> _
     Public Sub FirstPassingTest()
         Assert.True(True)
     End Sub
 
-    '<Test>
+    '<Test()> _
     'Public Sub FirstFailingTest()
     '    Assert.False(True, "I should fail!!")
     'End Sub
 
-    <Test>
+    <Test()> _
     Public Sub StubTestWithNSubstitute()
 
         'Arrange
@@ -29,7 +29,7 @@ Public Class HelloTests
         Assert.AreEqual("Sunny", actual)
     End Sub
 
-    <Test>
+    <Test()> _
     Public Sub MockTestWithNSubstitute()
 
         'Arrange
