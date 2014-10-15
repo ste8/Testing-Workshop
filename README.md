@@ -42,3 +42,13 @@ Spostarsi nella direcory /projects/Python e far girare i test con il comando:
 
 	python TestFrameworkSpec.py
 
+PHP
+---
+
+PREREQUISITI:
+PHP installato sulla propria macchina (su osx e linux è facilmente installabile), su windows può essere scaricato da qui: http://windows.php.net/download/
+
+ISTRUZIONI:
+Spostarsi nella directory /projects/PHP e far girare i test con i phar di phpunit:
+
+	./phpunit.phar TestFrameworkTest.php
