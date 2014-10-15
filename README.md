@@ -30,3 +30,15 @@ A questo punto verrà installato il test runner jasmine-node. Per far girare la 
 Utilizzando come target la cartella il runner caricherà tutti i js che rispettano la convenzione:
 
 	*Spec.js
+
+Python
+------
+
+PREREQUISITI:
+Python installato sulla propria macchina (su OSX e Linux è già installato installato) http://www.python.it/
+
+ISTRUZIONI:
+Spostarsi nella direcory /projects/Python e far girare i test con il comando:
+
+	python TestFrameworkSpec.py
+
